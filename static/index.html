@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Catan Randomizer</title>
+        <script src="https://unpkg.com/vue@2.1.10/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link href="catan_randomizer.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <h2 class="center">Catan Randomizer</h2>
+            <div id="board">
+                <template v-for="(tile,index) in tiles">
+                    <div class="tile " :class="'spot_' + index + ' ' + tile.resource" :title="tile.token">
+                        <div v-if="tile.Token != 1"class="subtile">{{tile.token}}</div>
+                    </div>
+                    <div v-if="index==2 || index==6 || index==11 || index==15" class="linebreak"></div>
+                </template>
+            </div>
+            <button class="center" v-on:click="getRandomBoard()">Generate Random Board</button>
+        </div>
+    </body>
+    <script src="catan_randomizer.js"></script>
+</html>

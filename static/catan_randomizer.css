@@ -1,0 +1,174 @@
+html,body{
+    margin:0px;
+    padding:0px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+#container{
+    margin-top:40px;
+}
+
+.center{
+    display:block;
+    margin:auto;
+    text-align:center;
+}
+#scores{
+    width:100%;
+    margin:20px auto;
+    text-align:center;
+}
+#board{
+    margin:10px auto 30px auto;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width:100%;
+}
+.tile{
+    display:block;
+}
+.subtile{
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.linebreak{
+    width:100%;
+}
+.button{
+    margin-top:10px;
+    height:30px;
+    width:140px;
+}
+.selection{
+    width:300px;
+}
+.spacer{
+    display:inline-block;
+}
+.green{
+    color:green;
+}
+.orange{
+    color:#dd8000;
+}
+.red{
+    color:red;
+}
+
+
+
+
+.grain{
+    background-color:#ecf335;
+}
+.grain.tile:before{
+    border-bottom-color:#ecf335;
+}
+.grain.tile:after{
+    border-top-color:#ecf335;
+}
+
+.brick{
+    background-color:#bb3500;
+}
+.brick.tile:before{
+    border-bottom-color:#bb3500;
+}
+.brick.tile:after{
+    border-top-color:#bb3500;
+}
+
+.desert{
+    background-color: #fff9c2;
+}
+.desert.tile:before{
+    border-bottom-color:#fff9c2;
+}
+.desert.tile:after{
+    border-top-color:#fff9c2;
+}
+
+
+.lumber{
+    background-color:#117900;
+}
+.lumber.tile:before{
+    border-bottom-color:#117900;
+}
+.lumber.tile:after{
+    border-top-color:#117900;
+}
+
+.ore{
+    background-color:#888888;
+}
+.ore.tile:before{
+    border-bottom-color:#888888;
+}
+.ore.tile:after{
+    border-top-color:#888888;
+}
+
+
+.wool{
+    background-color:#9cffba;
+}
+.wool.tile:before{
+    border-bottom-color:#9cffba;
+}
+.wool.tile:after{
+    border-top-color:#9cffba;
+}
+
+.tile {
+    position: relative;
+    width: 75px; 
+    height: 43.30px;
+    margin: 21.65px 10px;
+}
+.tile:before,
+.tile:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 37.5px solid transparent;
+    border-right: 37.5px solid transparent;
+}
+.tile:before {
+    bottom: 100%;
+    border-bottom: 21.65px solid;
+}
+.tile:after {
+    top: 100%;
+    width: 0;
+    border-top: 21.65px solid;
+}
+
+@media screen and (max-width: 480px){
+    .tile {
+        width: 40px;
+        height: 23.09px;
+        margin: 11.55px 5px;
+    }
+    .tile:before,
+    .tile:after {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+    }
+    .tile:before {
+        border-bottom: 11.55px solid;
+    }
+    .tile:after {
+        border-top: 11.55px solid;
+    }
+}
+
+
+
+
